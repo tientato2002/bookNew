@@ -18,6 +18,10 @@ public class Book {
     @Column(unique = true)
     private String code ;
     private int amount ;
+    private boolean status;
     @OneToMany(mappedBy = "book")
     private List<InvoiceBook> invoiceBookList ;
+
+    @OneToOne(mappedBy = "book")
+    private Punish punish;
 }

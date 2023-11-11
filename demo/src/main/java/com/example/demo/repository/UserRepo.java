@@ -14,7 +14,7 @@ public interface UserRepo extends JpaRepository<User, Integer> {
             " join ib.book b  where(u.id =:id)" +
             " group by (b.name)"
            )
-    List<String> findBookName(@Param("id") int id);
+    List<Integer> findBookName(@Param("id") int id);
     @Query(value = "select  r.name from User u join u.roles r")
     List<String> findRoleName();
 

@@ -11,5 +11,6 @@ public class InvoiceDTO {
     private UserDTO user;
     @JsonFormat(pattern = "dd/MM/yyyy", timezone = "Asia/Ho_Chi_Minh")
     private Date borrowingDate ;
+    // List
     private List<InvoiceBookDTO> invoiceBookDTOList;
 }
